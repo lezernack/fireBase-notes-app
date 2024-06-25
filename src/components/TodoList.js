@@ -86,7 +86,7 @@ const TodoList = () => {
   return (
     <Box mt={5}>
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8}>
-        {todos.map((todo) => {
+        {todos.map((todo) => (
           <Box
             key={todo.id}
             p={3}
@@ -174,8 +174,8 @@ const TodoList = () => {
                 Edit
               </Button>
             )}
-          </Box>;
-        })}
+          </Box>
+        ))}
       </SimpleGrid>
     </Box>
   );

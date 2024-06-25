@@ -37,16 +37,15 @@ const Auth = () => {
       <Button onClick={() => toggleColorMode()}>
         {colorMode == "dark" ? <FaSun /> : <FaMoon />}
       </Button>
-      ("")
       {isLoggedIn && (
         <>
           <Text color="green.500">{user.email}</Text>
           <Link color="red.500" onClick={() => auth.signOut()}>
-            Logoout
+            Logout
           </Link>
         </>
       )}
-      {isLoggedIn && (
+      {!isLoggedIn && (
         <Button leftIcon={<FaGoogle />} onClick={() => handleAuth()}>
           Login With Google
         </Button>
