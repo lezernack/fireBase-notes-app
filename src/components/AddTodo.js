@@ -61,7 +61,7 @@ const AddTodo = () => {
         <Select value={status} onChange={(e) => setStatus(e.target.value)}>
           <option
             value={"pending"}
-            style={{ color: "yellow", fontWeight: "bold" }}
+            style={{ color: "orange", fontWeight: "bold" }}
           >
             Pending
           </option>

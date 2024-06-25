@@ -111,7 +111,7 @@ const TodoList = () => {
                 <FaTrash />
               </Badge>
               <Badge
-                color={todo.status === "pending" ? "gray.500" : "green.500"}
+                color={todo.status === "pending" ? "orange.500" : "green.500"}
                 bg="inherit"
                 transition={"0.2s"}
                 _hover={{
@@ -127,7 +127,7 @@ const TodoList = () => {
               <Badge
                 float="right"
                 opacity="0.8"
-                bg={todo.status === "pending" ? "yellow.500" : "green.500"}
+                bg={todo.status === "pending" ? "orange.300" : "green.500"}
               >
                 {todo.status}
               </Badge>
@@ -169,7 +169,7 @@ const TodoList = () => {
               <Button
                 onClick={() => handleEditTodo(todo)}
                 variant="solid"
-                colorScheme="blue"
+                colorScheme="purple"
               >
                 Edit
               </Button>
