@@ -36,7 +36,7 @@ const TodoList = () => {
       setTodos([]);
       return;
     }
-    const q = query(collection(db, "todo"), where("user", "===", user.uid));
+    const q = query(collection(db, "todo"), where("user", "==", user.uid));
     onSnapshot(q, (querySnapshot) => {
       const ar = [];
       querySnapshot.forEach((doc) => {
@@ -95,7 +95,7 @@ const TodoList = () => {
             transition="0.2s"
             _hover={{ boxShadow: "sm" }}
           >
-            <Heading as="h3" fontSize={xl}>
+            <Heading as="h3" fontSize={"xl"}>
               <Badge
                 color="red.500"
                 bg="inherit"
